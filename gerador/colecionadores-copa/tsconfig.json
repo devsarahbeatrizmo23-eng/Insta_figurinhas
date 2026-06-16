@@ -15,8 +15,8 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-    "ignoreDeprecations": "6.0",
-    "baseUrl": "https://uwfgzvkfoewijlvsvrkj.supabase.co",
+    "ignoreDeprecations": ["6.0"],
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
