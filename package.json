@@ -1,0 +1,15 @@
+{
+  "name": "prova-ma-3.0",
+  "version": "1.0.0",
+  "description": "Projeto PROVA.MA 3.0",
+  "private": true,
+  "workspaces": [
+    "gerador/colecionadores-copa"
+  ],
+  "scripts": {
+    "dev": "npm --workspace=colecionadores-copa run dev",
+    "build": "npm --workspace=colecionadores-copa run build",
+    "preview": "npm --workspace=colecionadores-copa run preview",
+    "lint": "npm --workspace=colecionadores-copa run lint"
+  }
+}

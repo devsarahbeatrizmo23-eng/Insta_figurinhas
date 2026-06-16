@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Paleta oficial do projeto — Cores da bandeira do Brasil
+ *  Verde Brasil:   #009739  (primary)
+ *  Amarelo:        #FEDD00  (accent)
+ *  Azul:           #012169  (secondary)
+ *  Branco:         #FFFFFF  (background light)
+ *  Dark mode bg:   #0F172A  (substitui branco no modo escuro)
+ */
+
+@layer base {
+  :root {
+    /* Fundo branco no modo claro */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Verde Brasil #009739 = HSL(143, 100%, 30%) */
+    --primary: 143 100% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Azul #012169 = HSL(221, 98%, 21%) */
+    --secondary: 221 98% 21%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Amarelo #FEDD00 = HSL(52, 100%, 50%) */
+    --accent: 52 100% 50%;
+    --accent-foreground: 221 98% 21%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 143 100% 30%;
+
+    --radius: 0.5rem;
+  }
+
+  /* Dark mode: branco substituído por #0F172A */
+  .dark {
+    --background: 222 47% 11%;       /* #0F172A */
+    --foreground: 0 0% 100%;
+    --card: 222 47% 14%;
+    --card-foreground: 0 0% 100%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Verde Brasil mais vivo para contrastar no escuro */
+    --primary: 143 90% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Azul mais claro para contraste no escuro */
+    --secondary: 221 80% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Amarelo continua vibrante */
+    --accent: 52 100% 50%;
+    --accent-foreground: 221 98% 21%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 143 90% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
